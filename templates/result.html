@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Summary
+{% endblock %}
+
+{% block body %}
+{% for sentence in sentences %}
+<p class="text-center">{{ sentence }}</p>
+<br>
+{% endfor %}
+{% endblock %}

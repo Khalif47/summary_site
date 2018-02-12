@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block body %}
+<div>
+    <div style="left: 0;
+    line-height: 200px;
+    margin: auto;
+    margin-top: -100px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    background-image: url(../static/edu.jpg);
+    background-size: cover;
+    background-origin: content-box ;
+
+    background-repeat: no-repeat;
+    color: white;">
+        <p class="font-weight-light" style="font-size: 28px;">A delicate way of summarising chunks of articles into nice concise
+            manageable with our state of the
+            art summarizer.</p>
+        <div>
+            <a href="{{ url_for('summary') }}">
+                <button type="button" class="btn btn-primary">Summarize</button>
+            </a>
+            <a href="{{ url_for('feedback') }}">
+                <button type="button" class="btn btn-primary">Feedback</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+

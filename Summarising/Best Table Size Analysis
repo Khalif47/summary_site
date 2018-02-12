@@ -1,0 +1,34 @@
+english_small.txt size of: 210000 time: 3.8426935917295593
+english_small.txt size of: 209987 time: 3.6469295736139706
+english_small.txt size of: 400000 time: 3.3014500611712156
+english_small.txt size of: 399989 time: 3.230886971107065
+english_small.txt size of: 202361 time: 3.344833624277408
+english_large.txt size of: 210000 time: 11.671633835938263
+english_large.txt size of: 209987 time: 9.961737462204791
+english_large.txt size of: 400000 time: 8.13644445092978
+english_large.txt size of: 399989 time: 7.806654414503527
+english_large.txt size of: 202361 time: 12.70872747743423
+french.txt size of: 210000 time: 18.708450997363443
+french.txt size of: 209987 time: 22.708213685302695
+french.txt size of: 400000 time: 17.35249980223996
+french.txt size of: 399989 time: 13.73176748333249
+french.txt size of: 202361 time: 217.89838128598558
+
+
+Analysis:
+
+if we look closely the best time in the small text, the best is table size of 399989
+and the worst is 202361. The reason why that is the case is because tablesize with prime numbers 
+are the best as they assures more even distribution and avoid clustering values into specific positions. A prime number 
+solves this problem. However on the other hand number which are not prime numbers lead to more collisions as they hash 
+values to more similiar positions. Now another big factor which affects the efficiency of inserting into a hash table 
+is its size. The bigger the size the lesser chance of a collision because your increasing the variablity of where elements 
+could be hashed. If we look we could see that small prime table sizes perform worser than large non prime sizes so size is 
+a big factor in determining how your hash table performs. Also its quite intresting to see the extreme ineffiency of
+table size of 202361 for french. Its quite shocking. If we analyse the contents of french.txt the words are really 
+close to each other so it hashes to specific position as table size is non-prime and it is the smallest table_size in all.
+It's no coincidence that the smallest non-prime performs the worst and vice versa however when we consider this we must 
+also think about memory efficiency. if we choose a large table size it also has an effect on our memory performance. So
+there's always a compromise.
+
+Best table_size: 399989

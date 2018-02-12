@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+<div style="left: 0;
+    line-height: 200px;
+    margin: auto;
+    margin-top: -100px;
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    color: black;">
+    <p class="font-weight-light" style="font-size: 28px;">Copy paste an article, newsletter, paper below.</p>
+</div>
+<div style="left: 0;
+    margin: auto;
+    margin-top: -100px;
+    position: absolute;
+    top: 50%;
+    left: 30%">
+    <form action="{{ url_for('result')}}" method="POST">
+        <textarea name="text_a" rows="20" cols="100"></textarea>
+        <br>
+        <div style="text-align: center;">
+            <button type="submit" class="btn btn-primary">Summarize</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,15 @@
+Waterfall Methodology
+
+Stage 1
+
+- Hash functions to store words of text
+- Processing words and using 'common' theory to classify common words
+- Thoroughly test the hash function and ensure it works perfectly
+- Use text files for test cases
+- Create a list ADT to store all the common words.
+- Test again for accuracy
+
+Stage 2:
+
+- NA
+
