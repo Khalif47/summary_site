@@ -1,8 +1,5 @@
 from flask import Flask, flash, redirect, render_template, request, session, url_for
 from flask_session import Session
-from passlib.apps import custom_app_context as pwd_context
-from tempfile import mkdtemp
-import sqlite3 as sql
 from Summarising.word_processor import summarize, input_file
 
 # configure application
