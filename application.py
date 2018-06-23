@@ -40,4 +40,4 @@ def result():
         sentences = summarize(text, words)
         return render_template('result.html', sentences=sentences)
 
-app.run("0.0.0.0", "8080")
+app.run()
