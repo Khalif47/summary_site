@@ -39,5 +39,3 @@ def result():
         words = words.word_barrier()
         sentences = summarize(text, words)
         return render_template('result.html', sentences=sentences)
-
-app.run()
